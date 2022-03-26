@@ -5,10 +5,11 @@ import SelectItems from '../Items/SelectItems';
 const Cart = ({cart, resetAll, watch, setWatch}) => {
     const chooseForMe = () => {
         if (cart.length === 0) {
-                return;
+            alert('please choose at least one item')
+            return watch;
         }
         const number = Math.floor(Math.random() * 100);
-        const chooseOne = cart?.filter(flower => flower.id === number)
+        const chooseOne = cart?.filter(watch => watch.id === number)
         if (chooseOne.length === 0) {
                 chooseForMe();
         }
@@ -21,14 +22,14 @@ const Cart = ({cart, resetAll, watch, setWatch}) => {
       <div className="card-body">
         <h6>Chosen Item</h6>
         <hr />
-        <ol className='p-0'>
+        <div className='p-0'>
         {
         cart.map(watch =><SelectItems
                             key={watch.id}
                             watch={watch}
                         ></SelectItems>)
         }
-        </ol>
+        </div>
         <button onClick={() => chooseForMe()} className='btn btn-success btn-sm mb-5'>Choose 1 For Me</button>
         {
         watch?.length ? <RandomItem
