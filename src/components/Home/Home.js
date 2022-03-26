@@ -5,6 +5,7 @@ import Item from '../Items/Item';
 const Home = () => {
     const [items, setItems] = useState([]);
     const [cart, setCart] = useState([]);
+    const [watch, setWatch] = useState([]);
 
     useEffect(() => {
         fetch('watch.json')
@@ -16,6 +17,10 @@ const Home = () => {
         const newCart = [...cart, item];
         setCart(newCart);        
     }
+    const resetAll = () => {
+        setCart([]);
+        setWatch([]);
+}
 
     return (
         <div className='container mx-auto'>
@@ -37,6 +42,9 @@ const Home = () => {
             <div className='col sticky-top'>
             <Cart
                 cart={cart}
+                resetAll={resetAll}
+                watch={watch}
+                setWatch={setWatch}
             ></Cart>
             </div>
             </div>
