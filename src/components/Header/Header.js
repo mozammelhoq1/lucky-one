@@ -2,10 +2,10 @@ import React from 'react';
 import image from '../../images/clocks.png'
 const Header = () => {
     return (
-        <div>
+        <>
             <nav className="navbar sticky-top navbar-expand-lg navbar-light bg-light">
   <div className="container-fluid">
-    <a className="navbar-brand ms-3" href="/home">Navbar</a>
+    <a className="navbar-brand ms-3" href="/home">Time Keepers</a>
     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span className="navbar-toggler-icon"></span>
     </button>
@@ -27,10 +27,12 @@ const Header = () => {
     </div>
   </div>
 </nav>
-<div>
-    <img className='img-fluid' src={image} alt="" />
-</div>
-        </div>
+<div className='d-flex flex-wrap justify-content-center align-items-center'>
+<h1 className='text-center'>"Time And Tide Wait For None"</h1>
+  <img className='img-fluid' src={image} alt="" />
+  
+  </div>
+        </>
     );
 };
 

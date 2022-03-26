@@ -45,7 +45,7 @@ const Home = () => {
 
     return (
         // cart and items container 
-        <div className='container mx-auto'> 
+        <div className='container mx-auto mt-5'> 
         <div className="row">
             {/* items container  */}
             <div className="col-md-9">

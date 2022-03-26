@@ -37,7 +37,7 @@ const Cart = ({cart, resetAll, watch, setWatch}) => {
                         ></RandomItem> : ""
         }
         <br />
-        <button onClick={() => resetAll()} className='btn btn-danger btn-sm'>Reset All</button>
+        <button onClick={() => resetAll()} className='btn btn-danger btn-sm'>Choose Again</button>
       </div>
     </div>
     );
